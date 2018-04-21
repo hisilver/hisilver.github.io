@@ -39,7 +39,7 @@
 		year=nowtime.getFullYear();
 		month=nowtime.getMonth()+1;
 		day=nowtime.getDate();
-		document.getElementById("mytime").innerText="现在时间: "+year+"年"+month+"月"+day+" "+nowtime.toLocaleTimeString();
+		document.getElementById("mytime").innerText="现在时间: "+year+"年"+month+"月"+day+"日"+" "+nowtime.toLocaleTimeString()+"(这里的时间是根据本电脑的时间而显示，并非标准网络时间!)";
 	}
 			setInterval("showTime()",1000);
 
