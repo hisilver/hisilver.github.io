@@ -6,12 +6,14 @@
 <body>
 <p>hi world</p>
 <a href="/" onclick="javascript:window.close();return false;">close</a>
+<br/>
 <script language=javascript>
 	document.write("The last time of update:"+document.lastModified+"")
 </script>
 <script language="javascript">
 	
 	<!--
+
 	var text="";day=new Date();time=day.getHours();
 	if((time>=0)&&(time<7))
 		text="caution your body!";
@@ -25,10 +27,23 @@
 		text="play with your family!";
 	if((time>=22)&&(time<24))
 		text="It's too late,should sleep！";
-	document.write(text);
+	<br/>document.write("it's time to "+text);
 	
 	-->
 	
 </script>
+<br/>
+<script type="text/javascript">
+	function showTime(){
+		nowtime=new Date();
+		year=nowtime.getFullYear();
+		month=nowtime.getMonth()+1;
+		day=nowtime.getDate();
+		document.getElementById("mytime").innerText="现在时间: "+year+"年"+month+"月"+day+" "+nowtime.toLocaleTimeString();
+	}
+			setInterval("showTime()",1000);
+
+</script>
+<span id="mytime"></span>
 </body>
 </html>
