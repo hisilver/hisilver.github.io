@@ -5,7 +5,7 @@
 </head>
 <body>
 <p>hi world</p>
-<a href="/" onclick="javascript:window.close();return false;">close</a>
+
 <br/>
 <script language=javascript>
 	document.write("The last time of update:"+document.lastModified+"")
@@ -13,25 +13,26 @@
 <script language="javascript">
 	
 	<!--
-
 	var text="";day=new Date();time=day.getHours();
 	if((time>=0)&&(time<7))
-		text="a";
+		text="熬夜的你，要注意身体哦!";
 	if((time>=7)&&(time<12))
-		text="b";
+		text="开启好好一天!";
 	if((time>=12)&&(time<14))
-		text="c";
+		text="午饭+午休！";
 	if((time>=14)&&(time<18))
-		text="d";
+		text="休闲的下午时光!";
 	if((time>=18)&&(time<22))
-		text="e";
+		text="多陪陪家人吧!";
 	if((time>=22)&&(time<24))
-		text="f";
-	<br/>document.write(text);
+		text="太晚了，该睡觉啦！";
+	document.write(text);
 	
 	-->
 	
 </script>
+</body>
+
 <br/>
 <script type="text/javascript">
 	function showTime(){
@@ -42,7 +43,6 @@
 		document.getElementById("mytime").innerText="现在时间: "+year+"年"+month+"月"+day+"日"+" "+nowtime.toLocaleTimeString()+"(这里的时间是根据本电脑的时间而显示，并非标准网络时间!)";
 	}
 			setInterval("showTime()",1000);
-
 </script>
 <span id="mytime"></span>
 </body>
