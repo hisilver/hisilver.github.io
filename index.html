@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>hisilver</title>
 	<script type="text/javascript">
 		    var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
@@ -17,6 +16,8 @@
     });
 })();	
 	</script>
+	<title>hisilver</title>
+	
 </head>
 <body>
 <p>hello world</p>
@@ -62,6 +63,34 @@
 <br/>
 <script language=javascript>
 	document.write("最后一次修改的时间是:"+document.lastModified+8+"")
+</script><br>
+<script type="text/javascript">
+	var t=0;
+	var day=0;
+	var h=0;
+	var fen=0;
+	var s=0;
+	function time(){
+		t++;
+		if(t>=60){
+			if(t>=3600){
+				h=Math.floor(t/3600);
+				fen=Math.floor((t-(h*3600))/60);
+				s=t-h*3600-fen*60;
+			document.getElementById("ti").innerText="本页面已经运行:"+h+"时"+fen+"分"+s+"秒";		
+
+			}else{
+			fen=Math.floor(t/60);
+			s=t%60;
+			document.getElementById("ti").innerText="本页面已经运行:"+(fen)+"分"+s+"秒";			
+			}
+		}else{
+		document.getElementById("ti").innerText="本页面已经运行:"+t+"秒";	
+		}
+		
+	}
+	setInterval("time()",1);
 </script>
+<span id="ti"></span>
 </body>
 </html>
